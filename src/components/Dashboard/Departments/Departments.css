@@ -1,0 +1,248 @@
+.departments {
+    width: 100%;
+    border: 1px solid var(--borderColor-1);
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 10px;
+
+    .top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            gap: 0.5rem;
+            color: #fff;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            padding: 10px;
+            transition: var(--transition);
+            background-color: var(--secColor-1);
+            border: none;
+
+            h3 {
+                font-size: 0.9rem;
+                font-weight: 400;
+            }
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .department {
+            width: calc(50% - 0.5rem);
+            border: 1px solid var(--borderColor-1);
+            padding: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 1rem;
+            border-radius: 5px;
+
+            .header {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 1rem;
+
+                .content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 0.2rem;
+                    flex-direction: column;
+
+                    h3 {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        color: var(--textColor-1);
+                    }
+
+                    h5 {
+                        font-size: 0.9rem;
+                        font-weight: 300;
+                        color: var(--textColor-2);
+                    }
+                }
+
+                h3 {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: var(--secColor-1);
+                    cursor: pointer;
+                    transition: var(--transition);
+                }
+
+                h3:hover {
+                    color: var(--textColor-3);
+                }
+
+                border-bottom: 1px solid var(--borderColor-1);
+                padding-bottom: 5px;
+            }
+            .employees{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+                flex-direction: column;
+                .emp{
+                  display: flex;
+                  cursor: pointer;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: .5rem 5px;
+                  border-radius: 5px;
+                  width: 100%;
+                  font-size: 1.1rem;
+                  color: var(--textColor-1);
+                  transition: var(--transition);
+                  .profile-div{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 1rem;
+                    img{
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 50%;
+                    }
+                    .content-div{
+                      display: flex;
+                      justify-content: center;
+                      align-items: flex-start;
+                      flex-direction: column;
+                      h3{
+                        font-size: .9rem;
+                        font-weight: 400;
+                        color: var(--textColor-1);
+                      }
+                      h5{
+                        font-size: .8rem;
+                        font-weight: 300;
+                        color: var(--textColor-2);
+                      }
+                    }
+                  }
+        }
+        .emp:hover{
+            background-color: var(--pannelHoverColor);
+          }
+    }}}
+}
+
+
+
+/* responsiveness */
+/* Tablets */
+@media screen and (max-width: 999px) {
+    .departments {
+        .bottom {
+            .department {
+                width: 100%;
+
+                .header {
+                    .content {
+                        h3 {
+                            font-size: .9rem;
+                        }
+
+                        h5 {
+                            font-size: .8rem;
+                        }
+                    }
+
+                    >h3 {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Mobiles */
+@media screen and (max-width: 599px) {
+    .departments {
+        .top {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .searchbar {
+                width: 100%;
+                font-size: .9rem;
+
+                input {
+                    font-size: .9rem;
+                }
+            }
+
+            button {
+                width: 100%;
+                font-size: .9rem;
+
+                h3 {
+                    font-size: .9rem;
+                }
+            }
+        }
+        .bottom{
+            .department{
+              width: 100%;
+                .header{
+                  gap: .5rem;
+                  >h3{
+                    align-self: center;
+                    font-size: .8rem;
+                  }
+                }
+                .employees{
+                  .emp{
+                    .profile-div{
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: flex-start;
+                      gap: .5rem;
+                      img{
+                        width: 30px;
+                        height: 30px;
+                      }
+                      .content-div{
+                        h3{
+                          font-size: .8rem;
+                        }
+                        h5{
+                          font-size: .7rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }

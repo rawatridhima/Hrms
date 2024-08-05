@@ -1,0 +1,30 @@
+.Employee{
+    .bottom{
+        .keys{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+            .key{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .5rem;
+                .circle{
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                }
+                h3{
+                    font-size: .8rem;
+                    color: var(--textColor-1);
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+#addButton{
+    background-color: var(--secColor-1);
+    color: #fff;
+}

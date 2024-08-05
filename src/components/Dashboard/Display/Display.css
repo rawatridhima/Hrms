@@ -1,0 +1,91 @@
+.main{
+    .left{
+    >button{
+        border: none;
+        background-color: var(--pannelHoverColor);
+        color: var(--textColor-1);
+        padding: 5px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    .elements{
+        >button{
+            font-size: 1rem;
+            >h3{
+
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+    }
+  
+   
+}
+}
+
+
+    .bottom-pages {
+      width: 100%;
+
+      .viewData {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .viewDataContent {
+          width: calc(50% - .5rem);
+          border-bottom: 1px solid var(--borderColor-1);
+          cursor: pointer;
+
+          h3 {
+            font-size: .7rem;
+            font-weight: 300;
+            color: var(--textColor-2);
+          }
+
+          h4 {
+            font-size: .9rem;
+            font-weight: 300;
+            color: var(--textColor-1);
+          }
+        }
+
+        .downloadDataContent {
+          width: calc(50% - .5rem);
+          border: 1px solid var(--borderColor-1);
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          padding: 1rem;
+          cursor: pointer;
+
+          h3 {
+            font-size: .9rem;
+            font-weight: 300;
+            color: var(--textColor-1);
+          }
+
+          a {
+            color: var(--textColor-1);
+          }
+        }
+
+        .downloadDataContent:hover {
+          background-color: var(--secColor-2);
+
+          h3 {
+
+            color: #fff;
+          }
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  

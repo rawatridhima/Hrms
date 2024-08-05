@@ -1,0 +1,881 @@
+.Employee {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--borderColor-1);
+
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;;
+    gap: 1rem;
+
+    .btns {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        gap: 0.5rem;
+        color: #fff;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        padding: 10px;
+        transition: var(--transition);
+        background-color: var(--secColor-1);
+        border: 1px solid var(--secColor-1);
+
+        h3 {
+          font-size: 0.9rem;
+          font-weight: 400;
+        }
+      }
+
+      button:last-child {
+        background-color: transparent;
+        border: 1px solid var(--borderColor-1);
+        color: var(--textColor-1);
+      }
+    }
+  }
+
+  .top.filter-box {
+    justify-content: flex-end;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.emp.modal {
+  .add {
+    min-height: 90%;
+    width: 75%;
+
+    .pages {
+      border-bottom: 1px solid var(--borderColor-1);
+      /* padding-bottom: 5px; */
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 7px 15px;
+        border: none;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 5px;
+        color: var(--textColor-1);
+        background-color: transparent;
+        font-size: 0.9rem;
+        transition: var(--transition);
+
+        h3 {
+          font-weight: 500;
+        }
+      }
+
+      button.active {
+        color: var(--secColor-1);
+        border-bottom: 2px solid var(--secColor-1);
+      }
+    }
+
+    form {
+      flex: 1;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .upload {
+        width: calc(50% - .5rem);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: .5rem;
+        flex-direction: column;
+
+        >h3 {
+          font-size: .9rem;
+          font-weight: 400;
+          color: var(--textColor-1);
+        }
+
+        .DragFiles {
+          width: 100%;
+
+          .fileDrag {
+            width: 100%;
+            border: 2px dotted var(--secColor-1);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: .5rem;
+
+            >img {
+              width: 100%;
+              height: 150px;
+            }
+
+            .pdfView {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              gap: .5rem;
+              width: 100%;
+
+              img {
+                width: 50px;
+              }
+
+              h3 {
+                font-size: .9rem;
+                font-weight: 300;
+                color: var(--textColor-1);
+              }
+            }
+
+            .icon {
+              font-size: 1.4rem;
+              color: #fff;
+              background-color: var(--secColor-1);
+              padding: 10px;
+              border-radius: 5px;
+            }
+
+            h3 {
+              font-size: .9rem;
+              font-weight: 400;
+              color: var(--textColor-1);
+
+              span {
+                color: var(--secColor-1);
+              }
+            }
+
+            h5 {
+              font-size: .9rem;
+              font-weight: 400;
+              color: var(--textColor-1);
+
+              span {
+                color: var(--secColor-1);
+              }
+            }
+          }
+        }
+      }
+
+      >input,
+      select {
+        width: calc(50% - .5rem);
+
+        option {
+          width: 100%;
+          color: var(--textColor-1);
+          background-color: var(--bgColor-1);
+          transition: var(--transition);
+        }
+      }
+
+      >.DragFiles {
+        width: 100%;
+
+        .drag {
+          width: 100px;
+          height: 100px;
+          border-radius: 10px;
+          border: 1px solid var(--borderColor-1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.3rem;
+          color: var(--textColor-1);
+          background-color: var(--pannelHoverColor);
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+          }
+        }
+      }
+
+      .full-input {
+        width: 100%;
+      }
+
+      .one-third-input {
+        width: calc((100% - 2rem) / 3);
+      }
+
+      .btns {
+        >input {
+          width: auto;
+        }
+
+        >.btns {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.view {
+  border: 1px solid var(--borderColor-1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+
+  >.view-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--borderColor-1);
+
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      >img {
+        width: 100px;
+        height: 100px;
+        border-radius: 15px;
+      }
+
+      .info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: .5rem;
+        flex-direction: column;
+        color: var(--textColor-1);
+
+        h3 {
+          text-transform: capitalize;
+          font-size: 1.3rem;
+          font-weight: 600;
+
+
+        }
+
+        .frame {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: .5rem;
+
+          h4 {
+            font-size: .9rem;
+            font-weight: 300;
+            color: var(--textColor-1);
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        height: 50px;
+        width: 120px;
+        border-radius: 15px;
+        background-color: var(--secColor-2);
+        padding: .5rem;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        cursor: pointer;
+
+        h5 {
+          font-size: .8rem;
+          font-weight: 300;
+        }
+      }
+
+      .btn:hover {
+        background-color: var(--secColor-1);
+      }
+
+    }
+
+
+  }
+
+  >.view-bottom {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    .left-box {
+      width: calc(23% - .5rem);
+      border: 1px solid var(--borderColor-1);
+      border-radius: 12px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+
+
+      button {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: .5rem;
+        padding: 1rem;
+        color: var(--textColor-1);
+        cursor: pointer;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+
+        h3 {
+          font-size: .9rem;
+          font-weight: 300;
+        }
+      }
+
+
+      button:hover,
+      button.active {
+        background-color: var(--secColor-2);
+        color: #fff;
+        border-radius: 12px;
+
+        h3 {
+          font-weight: 400;
+        }
+      }
+
+    }
+
+    >.right-box {
+      width: calc(77% - .5rem);
+
+      .profile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+
+        >.pages {
+          border-bottom: 1px solid var(--borderColor-1);
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          gap: 1rem;
+
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            padding: 5px;
+            border: none;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 5px;
+            color: var(--textColor-1);
+            background-color: transparent;
+            font-size: 0.8rem;
+            transition: var(--transition);
+            cursor: pointer;
+
+            h3 {
+              font-weight: 300;
+            }
+          }
+
+          button.active {
+            color: var(--secColor-1);
+            border-bottom: 2px solid var(--secColor-1);
+          }
+
+        }
+
+        .bottom-pages {
+          width: 100%;
+
+          .viewData {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            .viewDataContent {
+              width: calc(50% - .5rem);
+              border-bottom: 1px solid var(--borderColor-1);
+              cursor: pointer;
+
+              h3 {
+                font-size: .7rem;
+                font-weight: 300;
+                color: var(--textColor-2);
+              }
+
+              h4 {
+                font-size: .9rem;
+                font-weight: 300;
+                color: var(--textColor-1);
+              }
+            }
+
+            .downloadDataContent {
+              width: calc(50% - .5rem);
+              border: 1px solid var(--borderColor-1);
+              border-radius: 10px;
+              display: flex;
+              justify-content: space-between;
+              padding: 1rem;
+              cursor: pointer;
+
+              h3 {
+                font-size: .9rem;
+                font-weight: 300;
+                color: var(--textColor-1);
+              }
+
+              a {
+                color: var(--textColor-1);
+              }
+            }
+
+            .downloadDataContent:hover {
+              background-color: var(--secColor-2);
+
+              h3 {
+
+                color: #fff;
+              }
+
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+
+      /* EmpAttendance */
+      
+
+    }
+  }
+}
+
+/* responsiveness */
+/* tablets */
+@media screen and (max-width:999px) {
+  .emp.modal {
+    .add {
+      min-height: 50%;
+
+      .pages {
+        gap: .5rem;
+
+        button {
+          gap: .5rem;
+          padding: 5px;
+          font-size: 17px;
+
+          h3 {
+            font-size: 10px;
+          }
+        }
+      }
+
+      form {
+        .upload {
+          .DragFiles {
+            .fileDrag {
+              .icon {
+                font-size: 1rem;
+                padding: 8px;
+              }
+
+              h3 {
+                font-size: .8rem;
+              }
+
+              h5 {
+                font-size: .8rem;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .view {
+      >.view-bottom {
+        >.right-box {
+          .profile {
+            .pages {
+              gap: .5rem;
+
+              button {
+                gap: .5rem;
+                padding: 5px;
+                font-size: 17px;
+
+                h3 {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    .add {
+      form {
+        .content {
+          .values {
+            .child {
+              h3 {
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Employee {
+    & .top {
+      .btns {
+        gap: .5rem;
+
+        button {
+          padding: 7px;
+
+        }
+      }
+
+    }
+  }
+}
+
+/* mobiles */
+@media screen and (max-width:599px) {
+  .emp.modal {
+    .add {
+      min-height: 50%;
+      min-width: 90%;
+
+      >h3 {
+        font-size: .9rem;
+      }
+
+      .pages {
+        gap: 5px;
+
+        button {
+          gap: 5px;
+          padding: 2px;
+          font-size: 10px;
+
+          h3 {
+            font-size: 8px;
+          }
+        }
+      }
+
+      form {
+        .DragFiles {
+          .drag {
+            width: 60px;
+            height: 60px;
+            font-size: .9rem;
+
+            img {
+              height: 66px;
+            }
+          }
+        }
+
+        input,
+        select {
+          padding: 5px;
+          font-size: .5rem;
+        }
+
+        .upload {
+          h3 {
+            font-size: 8px;
+            font-weight: 300;
+          }
+
+          .DragFiles {
+            .fileDrag {
+              .icon {
+
+                font-size: 10px;
+                padding: 4px;
+              }
+
+              h3 {
+                font-size: 8px;
+              }
+
+              h5 {
+                font-size: 8px;
+              }
+            }
+          }
+        }
+      }
+
+      >h3 {
+        font-size: .9rem;
+      }
+
+    }
+  }
+
+  .modal {
+    .add {
+      .searchbar {
+        font-size: .9rem;
+        padding: 5px;
+        justify-content: flex-start;
+
+        input {
+          font-size: .7rem;
+        }
+      }
+
+      form {
+        .content {
+          h3 {
+            font-size: .7rem;
+          }
+
+          .values {
+            .child {
+              h3 {
+                font-size: 0.5rem;
+                font-weight: 300;
+              }
+            }
+          }
+        }
+
+        input,
+        select {
+          padding: 5px;
+          font-size: 0.6rem;
+        }
+
+        p {
+          font-size: 10px;
+        }
+      }
+
+      >h3 {
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .view {
+    padding: 0.5rem;
+    gap: .5rem;
+
+    >.view-top {
+      padding: 5px;
+
+      .left {
+        gap: .5rem;
+
+        >img {
+          width: 35px;
+          height: 35px;
+          border-radius: 8px;
+        }
+
+        .info {
+          gap: 2px;
+
+          h3 {
+            font-size: 12px;
+          }
+
+          .frame {
+            gap: 5px;
+
+            h4 {
+              font-size: .5rem;
+            }
+          }
+        }
+      }
+
+      .right {
+        gap: .5rem;
+        flex-direction: column;
+
+        .btn {
+          gap: 5px;
+          height: 25px;
+          width: 62px;
+          border-radius: 7px;
+          padding: 5px;
+
+          h5 {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+
+    >.view-bottom {
+      flex-direction: column;
+
+      >.right-box {
+        width: 100%;
+
+        .profile {
+          .pages {
+            gap: 5px;
+
+            button {
+              gap: 3px;
+              padding: 3px;
+              font-size: 10px;
+
+              h3 {
+                font-size: 10px;
+              }
+            }
+          }
+
+          .bottom-pages {
+            .viewData {
+              .viewDataContent {
+                h3 {
+                  font-size: 8px;
+                }
+
+                h4 {
+                  font-size: 10px;
+                }
+              }
+
+              .downloadDataContent {
+                border-radius: 5px;
+                padding: 2px;
+
+                h3 {
+                  font-size: 10px;
+                }
+
+                a {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      >.left-box {
+        width: 100%;
+        border-radius: 5px;
+
+        button {
+          gap: 2px;
+          padding: 3px;
+          font-size: 9px;
+
+          h3 {
+            font-size: 10px;
+          }
+        }
+
+        button:hover,
+        button.active {
+          border-radius: 4px;
+        }
+      }
+
+    }
+  }
+
+  .Employee {
+    gap: .5rem;
+    padding: 6px;
+
+    .top {
+      gap: .5rem;
+      .btns {
+        button {
+          gap: 2px;
+          padding: 3px;
+          font-size: 15px;
+
+          h3 {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+
+}

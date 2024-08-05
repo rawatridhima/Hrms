@@ -1,0 +1,50 @@
+.Employee {
+    .top {
+      .btns {
+        input {
+          width: 100%;
+          border: 1px solid var(--borderColor-1);
+          border-radius: 5px;
+          padding: 10px;
+          font-size: 0.9rem;
+          color: var(--textColor-1);
+          font-weight: 400;
+          transition: var(--transition);
+          background: transparent;
+        }
+        input:placeholder-shown,
+        select.placeholder {
+          color: #757575;
+        }
+        input:focus,
+        select:focus {
+          outline-width: 0;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:focus {
+          transition: background-color 600000s 0s, color 600000s 0s;
+        }
+        input:-webkit-autofill {
+          -webkit-text-fill-color: var(--textColor-1);
+        }
+        input[data-autocompleted] {
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+
+  /* mobiles */
+@media screen and (max-width:599px) {
+  .Employee {
+    .top {
+      .btns {
+        input {
+          border-radius: 5px;
+          padding: 5px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

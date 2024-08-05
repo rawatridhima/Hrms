@@ -1,0 +1,398 @@
+.Employee {
+    .top {
+        .btns {
+            select{
+                /* border: 1px solid var(--borderColor-1);
+                border-radius: 5px;
+                padding: 10px;
+                font-size: 0.9rem;
+                color: var(--textColor-1);
+                font-weight: 400; */
+
+                border: 1px solid var(--borderColor-1);
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 0.9rem;
+        color: var(--textColor-1);
+        font-weight: 400;
+        transition: var(--transition);
+        background: transparent;
+        margin-top: 0;
+            }
+            #addBtn {
+                background-color: var(--secColor-2);
+                color: #ffff;
+            }
+        }
+    }
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+
+    .icon {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .downloadBtn {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            background-color: var(--secColor-2);
+            color: var(--bgColor-1);
+            border-radius: 7px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+    }
+}
+
+.all {
+    background-color: var(--bgColor-1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+
+
+
+}
+
+.all {
+
+    .empInfo {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: .5rem;
+        padding: .5rem;
+
+        h3 {
+            font-size: .9rem;
+            font-weight: 400;
+            color: var(--textColor-1);
+
+            span {
+                font-size: 1rem;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.all {
+
+    .paySlip {
+        width: 100%;
+        padding: .5rem;
+        border: 2px solid var(--borderColor-1);
+        border-radius: 12px;
+
+        table {
+            color: var(--textColor-1);
+            border-collapse: separate;
+            border-spacing: 0 5px;
+
+            thead {
+                tr {
+                    td {
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: var(--textColor-2);
+                        text-transform: capitalize;
+                        padding: 5px;
+                    }
+
+                    #lst {
+                        text-align: right;
+                    }
+
+                    #frst {
+                        text-align: left;
+                    }
+                }
+
+            }
+
+            tbody {
+                tr {
+                    td {
+
+                        font-size: .8rem;
+                        font-weight: 400;
+                        color: var(--textColor-1);
+                        text-transform: capitalize;
+                        padding: 7px;
+                    }
+
+                    #lst {
+                        text-align: right;
+                    }
+
+                    #frst {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.all {
+
+    .text {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .left {
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 1rem;
+
+            p,
+            h5 {
+                font-size: .8rem;
+                color: var(--textColor-1);
+                font-weight: 400;
+
+            }
+        }
+
+        .right {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 1rem;
+
+            img {
+                height: 80px;
+                width: 80px;
+            }
+        }
+    }
+}
+
+.all {
+
+    .heading {
+
+
+        font-size: 1rem;
+        font-weight: 400;
+        border-bottom: 2px solid var(--textColor-1);
+        width: 100%;
+        color: var(--textColor-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+}
+
+/* responsiveness */
+/* tablets */
+@media screen and (max-width:999px) {
+    .modal {
+        .all {
+            .paySlip {
+                table {
+                    thead {
+                        display: inline;
+                        width: 100%;
+
+                        tr {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            border: none;
+
+                            td {
+                                padding: 5px;
+                                width: 50%;
+                            }
+
+                            td#frst {
+                                text-align: left;
+
+                            }
+
+                            td#lst {
+                                text-align: right;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        display: inline;
+                        gap: .5rem;
+
+                        tr {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            border: none;
+
+                            td {
+                                display: inline;
+                                width: 50%;
+                                padding: 2px;
+                            }
+
+                            td#frst {
+                                text-align: left;
+
+                            }
+
+                            td#lst {
+                                text-align: right;
+                            }
+
+                            td::before {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mobiles */
+@media screen and (max-width:599px) {
+   .all{
+    .heading{
+        font-size: 10px;
+        font-weight: 300;
+    }
+   }
+   .all{
+    .empInfo{
+        gap: 2px;
+        padding: 4px;
+        h3 {
+            font-size: .6rem;
+            span{
+                font-size: .6rem; 
+            }
+        }
+        
+    }
+   }
+   .modal{
+
+       .all {
+        .paySlip {
+            padding: 5px;
+            table {
+                 thead {
+                     tr {
+                        td {
+                            padding: 2px;
+                            font-size: 10px;
+                        }
+                    }
+                }
+                & tbody {
+                    & tr {
+                        td {
+                            font-size: 10px;
+                        }}}    
+            }
+        }
+    }
+   }
+   .all {
+    & .text {
+        .left {
+            width: 60%;
+            padding: .5rem;
+            p, h5 {
+                font-size: 8px;
+            }
+        }
+        .right{
+            width: 40%;
+            padding: .5rem;
+            img {
+                height: 65px;
+                width: 65px;
+            }
+        }
+    }
+}
+.modal {
+     .downloadBtn {
+        button {
+            gap: 5px;
+            border-radius: 5px;
+            font-size: 10px;
+            padding: 5px;
+        }
+    }
+}
+.modal {
+    .icon {
+        font-size: 12px;
+    }
+}
+.Employee{
+    .top{
+        .search{
+            width: 40%;
+        }
+        .btns{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+            .same{
+                display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2px;
+            }
+            select{
+                border-radius: 4px;
+                padding: 5px;
+                font-size: 8px;
+            }
+            button {
+                gap: 5px;
+                padding: 5px;
+                font-size: 10px;
+            }
+        }
+    }
+}
+}

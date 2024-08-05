@@ -1,0 +1,22 @@
+.loader{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    .box{
+        border-radius: 50%;
+        border: 5px solid var(--bgColor-2);
+        border-bottom: 5px solid var(--secColor-1);
+        animation:loadSpinner 1s linear infinite;
+    }
+}
+
+@keyframes loadSpinner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

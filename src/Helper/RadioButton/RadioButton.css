@@ -1,0 +1,36 @@
+.radiobutton-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    .radiobutton{
+        border: 1px solid var(--borderColor-1);
+        background-color: var(--bgColor);
+        color: var(--bgColor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        border-radius: 50%;
+        position: relative;
+    }
+    .radiobutton::after{
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        width: 70%;
+        height: 70%;
+        content: '';
+        background-color: transparent;
+        border-radius: 50%;
+    }
+    .radiobutton.active::after{
+        background-color: var(--secColor-1);
+    }
+    h3{
+        font-size: .9rem;
+        font-weight: 400;
+        color: var(--textColor-1);
+        text-transform: capitalize;
+    }
+}

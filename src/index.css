@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+:root {
+  /* Common Colors */
+  --bgColor-2: #f8f6fe;
+  --secColor-1: #8d75f5;
+  --secColor-2: #7152f3;
+  --secColor-3: #b21589;
+  --toggleBtn: #34c759;
+  --textColor-3: #f45b69;
+
+  /* Light Mode Colors*/
+  /* --bgColor-1:#fff;
+  --textColor-1:#16151C;
+  --textColor-2:#A2A1A8;
+  --pannelColor:#FAFAFB;
+  --pannelHoverColor:#F3F2FB;
+  '--borderColor-1':'#ECECEE'
+  */
+
+  /* Dark Mode Colors*/
+  /* --bgColor-1:#16151C;
+  --textColor-1:#FFFFFF;
+  --textColor-2:#9F9EA5;
+  --pannelColor:#1D1C23;
+  --pannelHoverColor:#211F2D;
+   '--borderColor-1':'#323138' */
+
+  --transition: all 0.4s;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: Lexend;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* responsiveness */
+/* tablets */
+@media screen and (max-width:999px){
+  
+}
+/* mobiles */
+@media screen and (max-width:599px){
+  
+}
